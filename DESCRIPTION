@@ -1,0 +1,23 @@
+Package: hdr
+Title: Interface to the UNDR Human Development Report API
+Version: 0.1
+Authors@R: person("Eric", "Persson", email = "expersso5@gmail.com",
+  role = c("aut", "cre"))
+Description: The package provides a complete interface to the United Nations
+    Development Programme Human Development Report API (hdr.undp.org). The API
+    includes a large amount of human development data, including all the series used
+    to compute the Human Development Index (HDI), as well as the HDI itself.
+Depends: 
+    R (>= 3.2.3)
+License: CC0
+LazyData: true
+BugReports: https://github.com/expersso/hdr
+URL: http://hdr.undp.org ; https://github.com/expersso/hdr
+RoxygenNote: 5.0.1
+Imports: httr
+Suggests: ggplot2,
+    dplyr,
+    tidyr,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
