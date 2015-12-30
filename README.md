@@ -16,48 +16,47 @@ library(hdr)
 
 # Get a data frame with id and indicator names
 head(hdr_indicators)
-#>       id                                           indicator
-#> 1  36806      Adolescent birth rate (women aged 15-19 years)
-#> 2 101406                     Adult literacy rate, both sexes
-#> 3  27706                 Carbon dioxide emissions per capita
-#> 4  98106                    Change in forest area, 1990/2011
-#> 5 105906 Combined gross enrollment in education (both sexes)
-#> 6 103706                                     Education index
+```
 
+    ##       id                                           indicator
+    ## 1  36806      Adolescent birth rate (women aged 15-19 years)
+    ## 2 101406                     Adult literacy rate, both sexes
+    ## 3  27706                 Carbon dioxide emissions per capita
+    ## 4  98106                    Change in forest area, 1990/2011
+    ## 5 105906 Combined gross enrollment in education (both sexes)
+    ## 6 103706                                     Education index
+
+``` r
 # Get the Human Development Index for Germany in 2013
 hdi <- get_data(indicator = 137506, country = "DEU", year = 2013)
 head(hdi)
-#>       id                                 indicator iso3c country year
-#> 1 137506 HDI: Human development index (HDIg) value   DEU Germany 2013
-#>   value
-#> 1 0.911
+```
 
+    ##       id                                 indicator iso3c country year
+    ## 1 137506 HDI: Human development index (HDIg) value   DEU Germany 2013
+    ##   value
+    ## 1 0.911
+
+``` r
 # Leave a dimension as NULL (default) to get all values for that dimension
 # e.g. all countries and all year for a specific indicator:
 df <- get_data(103606)
 head(df)
-#>       id         indicator iso3c     country year value
-#> 1 103606 HDI: Income index   AFG Afghanistan 1980 0.489
-#> 2 103606 HDI: Income index   AFG Afghanistan 1985 0.513
-#> 3 103606 HDI: Income index   AFG Afghanistan 1990 0.486
-#> 4 103606 HDI: Income index   AFG Afghanistan 1995 0.327
-#> 5 103606 HDI: Income index   AFG Afghanistan 2000 0.328
-#> 6 103606 HDI: Income index   AFG Afghanistan 2005 0.366
+```
 
+    ##       id         indicator iso3c     country year value
+    ## 1 103606 HDI: Income index   AFG Afghanistan 1980 0.489
+    ## 2 103606 HDI: Income index   AFG Afghanistan 1985 0.513
+    ## 3 103606 HDI: Income index   AFG Afghanistan 1990 0.486
+    ## 4 103606 HDI: Income index   AFG Afghanistan 1995 0.327
+    ## 5 103606 HDI: Income index   AFG Afghanistan 2000 0.328
+    ## 6 103606 HDI: Income index   AFG Afghanistan 2005 0.366
+
+``` r
 # Get the adolescent birth rate for all years and all countries
 br <- get_data(c(24806, 36806), year = 2010:2013)
 
 library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> 
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> 
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
 library(tidyr)
 
 br <- br %>% 
