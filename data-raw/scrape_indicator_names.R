@@ -13,4 +13,4 @@ hdr_indicators <- separate(hdr_indicators, id, c("id", "indicator"),
 
 class(hdr_indicators) <- c("tbl_df", "tbl", "data.frame")
 
-save(hdr_indicators, file = "data/hdr_indicatoirs.rda", compress = "bzip2")
+save(hdr_indicators, file = "data/hdr_indicators.rda", compress = "bzip2")
