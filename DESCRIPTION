@@ -1,6 +1,6 @@
 Package: hdr
-Title: Interface to the UNDR Human Development Report API
-Version: 0.1
+Title: Interface to the UNDP Human Development Report API
+Version: 0.1.900
 Authors@R: person("Eric", "Persson", email = "expersso5@gmail.com",
   role = c("aut", "cre"))
 Description: Provides a complete interface to the United Nations

@@ -3,6 +3,10 @@ output:
   md_document:
     variant: markdown_github
 ---
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/hdr)](http://cran.r-project.org/package=hdr)
+[![Travis-CI Build Status](https://travis-ci.org/expersso/hdr.svg?branch=master)](https://travis-ci.org/expersso/hdr)
+[![Coverage Status](https://img.shields.io/codecov/c/github/expersso/hdr/master.svg)](https://codecov.io/github/expersso/hdr?branch=master)
+[![Cranlogs Downloads](http://cranlogs.r-pkg.org/badges/grand-total/hdr)](http://cran.r-project.org/web/packages/hdr)
 
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
@@ -20,6 +24,10 @@ Human Development Index (HDI), as well as the HDI itself.
 
 To get the package:
 ```{r, eval = FALSE}
+# From CRAN
+install.packages("hdr")
+
+# Development version
 library(devtools)
 install_github("expersso/hdr")
 ```
