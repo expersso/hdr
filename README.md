@@ -2,6 +2,8 @@
 
 ### hdr package
 
+*The UNDP has shut down their API, so this package is now deprecated.*
+
 The `hdr` package provides a complete interface to the [United Nations Development Programme Human Development Report API](hdr.undp.org). This data source includes a large amount of human development data, including all the series used to compute the Human Development Index (HDI), as well as the HDI itself.
 
 To get the package:
